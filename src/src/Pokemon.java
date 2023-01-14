@@ -1,33 +1,40 @@
 public class Pokemon {
-    private String type;
+
+    //Private variabelen aanmaken:
     private String name;
+    private int level;
 
-    public Pokemon(String name, String type){
+    //Constructor maken en variabelen als parameters meegeven:
+    public Pokemon(String name, int level) {
         this.name = name;
-        this.type = type;
+        this.level = level;
     }
 
-    public String getName(){
-        return this.name;
-    }
+    //Getters & Setters per variable aanmaken:
 
-    public void setName(String name){
+    public void setName(String name) {
         this.name = name;
     }
 
-    public String getType(){
-        return this.type;
+    public String getName() {
+        return name;
     }
 
-    public void setType(String type){
-        this.type = type;
+    public void setLevel(int level) {
+        this.level = level;
     }
+
+    public int getLevel() {
+        return level;
+    }
+
+    //Twee methodes meegeven:
 
     public void attack(){
-        System.out.println(this.name + "used a basic attack");
+        System.out.println(name + " is attacking with level " + level);
     }
 
     public void defend(){
-        System.out.println(this.type + "used a basic defense");
+        System.out.println(name + " is defending with level " + level);
     }
 }

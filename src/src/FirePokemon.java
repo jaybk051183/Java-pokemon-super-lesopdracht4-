@@ -1,32 +1,36 @@
-public class FirePokemon extends Pokemon {
+public class FirePokemon extends Pokemon{
+
     private int firePower;
-    private int fireResistence;
+    private String fireType;
 
-    public FirePokemon(String name, int firePower, int fireResistence){
-        super(name, "Fire");
+    public FirePokemon(String name, int level, int firePower, String fireType) {
+        super(name, level);
         this.firePower = firePower;
-        this.fireResistence = fireResistence;
+        this.fireType = fireType;
     }
 
-    public int getFirePower(){
-        return this.firePower;
+    public int getFirePower() {
+        return firePower;
     }
 
-    public void setFirePower(int firePower){
+    public void setFirePower(int firePower) {
         this.firePower = firePower;
     }
 
-    public int getFireResistence(){
-        return this.fireResistence;
+    public String getFireType() {
+        return fireType;
     }
 
-    public void setFireResistence(int fireResistence){
-        this.fireResistence = fireResistence;
+    public void setFireType(String fireType) {
+        this.fireType = fireType;
+    }
+
+    public void FlameThrower(){
+        System.out.println(getName() + " uses FlameThrower, type " + getFireType() + " and power " + getFirePower());
     }
 
     @Override
     public void attack(){
-        System.out.println(this.getName() + "used a fire attack");
+        System.out.println(getName() + " is attacking with level " + getLevel()+ " and power " + getFirePower());
     }
-
 }
